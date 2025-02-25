@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/sitemap.xml
