@@ -3,71 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overbed Tables Blog - Latest Insights and Analysis</title>
+    <title>Blog - overbed-tables.com</title>
     <meta name="description" content="Discover why overbed tables are holding you back from true productivity and dignity">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased" x-data="{ currentPage: 1, totalPages: 2, postsPerPage: 4 }">
     <header class="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo" class="text-xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
-                    overbed-tables.com
-                </a>
-                <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo" class="text-gray-300 hover:text-white transition-colors duration-300">
-                    ← Back
-                </a>
+                <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo" class="text-xl font-bold text-white hover:text-blue-400 transition-colors duration-300">overbed-tables.com</a>
+                <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo" class="text-gray-300 hover:text-white transition-colors duration-300">← Back to Home</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="relative min-h-screen pt-32 px-6">
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-            <div class="relative container mx-auto">
-                <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Our Blog</h1>
-                
-                <div class="max-w-3xl mx-auto mb-12 text-center">
-                    <p class="text-xl text-gray-300">Exploring the intersection of workspace psychology, productivity, and professional dignity. Join us as we examine the impact of your work environment on success and well-being.</p>
-                </div>
+    <main class="pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <header class="mb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Discover insights, tips, and honest perspectives about overbed tables and productivity.</p>
+            </header>
 
-                <div class="bg-gray-700 rounded-xl p-8 mb-12 hover:transform hover:scale-105 transition-all duration-300">
-                    <span class="text-sm text-blue-400 mb-2 block">February 25, 2025</span>
-                    <h2 class="text-2xl font-bold mb-4">The Hidden Costs of Overbed Tables: A Deep Dive Into Workspace Psychology</h2>
-                    <p class="text-gray-300 mb-6">The rise of remote work has led many to adopt overbed tables as makeshift workspaces, but this convenient solution comes with significant hidden costs. Beyond the obvious ergonomic challenges and physical health risks, using your bed as an office creates dangerous psychological blurs between work and rest spaces. This practice can disrupt sleep patterns, decrease productivity, and compromise your professional image during video calls. Experts warn against the long-term implications, including poor posture, chronic pain, and disrupted work-life balance. Instead, professionals are urged to create dedicated workspaces, even in small living environments, to maintain boundaries and protect their wellbeing.</p>
-                    <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/blog/the-hidden-costs-of-overbed-tables-a-deep-dive-int.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transform hover:scale-105 transition-all duration-300">
-                        Read More
-                    </a>
-                </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-8">Latest Articles</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                        <a href="../blog/the-ugly-truth-about-overbed-tables.html" class="block">
-                            <div class="p-6">
-                                <h2 class="text-xl font-semibold mb-4 text-blue-400">The Ugly Truth About Overbed Tables</h2>
-                                <p class="text-gray-300 mb-4">Discover the harsh reality of overbed tables and why they might be the furniture equivalent of giving up on life. A humorous but honest take on bed-based productivity.</p>
-                                <div class="flex items-center text-gray-400 text-sm">
-                                    <time datetime="2025-02-25">February 25, 2025</time>
-                                    <span class="mx-2">•</span>
-                                    <span>5 min read</span>
+                    <!-- Page 1 - First set of posts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-show="currentPage === 1">
+                        <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                            <a href="../blog/the-best-alternatives-to-overbed-tables-that-cost-less.html" class="block">
+                                <div class="p-6">
+                                    <h2 class="text-xl font-semibold mb-4 text-blue-400">The Best Alternatives to Overbed Tables That Cost Less</h2>
+                                    <p class="text-gray-300 mb-4">Discover affordable alternatives to overbed tables that won't make your bedroom look like a hospital ward.</p>
+                                    <div class="flex items-center text-gray-400 text-sm">
+                                        <time datetime="2025-02-25">February 25, 2025</time>
+                                        <span class="mx-2">•</span>
+                                        <span>5 min read</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                            <a href="../blog/why-you-might-not-need-an-overbed-table-after-all.html" class="block">
+                                <div class="p-6">
+                                    <h2 class="text-xl font-semibold mb-4 text-blue-400">Why You Might NOT Need an Overbed Table After All</h2>
+                                    <p class="text-gray-300 mb-4">Discover why an overbed table might not be the solution you're looking for, unless you have specific medical needs.</p>
+                                    <div class="flex items-center text-gray-400 text-sm">
+                                        <time datetime="2025-02-25">February 25, 2025</time>
+                                        <span class="mx-2">•</span>
+                                        <span>5 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                            <a href="../blog/the-ugly-truth-about-overbed-tables.html" class="block">
+                                <div class="p-6">
+                                    <h2 class="text-xl font-semibold mb-4 text-blue-400">The Ugly Truth About Overbed Tables</h2>
+                                    <p class="text-gray-300 mb-4">Discover the harsh reality of overbed tables and why they might be the furniture equivalent of giving up on life. A humorous but honest take on bed-based productivity.</p>
+                                    <div class="flex items-center text-gray-400 text-sm">
+                                        <time datetime="2025-02-25">February 25, 2025</time>
+                                        <span class="mx-2">•</span>
+                                        <span>5 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                            <a href="../blog/the-hidden-costs-of-overbed-tables-a-deep-dive-int.html" class="block">
+                                <div class="p-6">
+                                    <h2 class="text-xl font-semibold mb-4 text-blue-400">The Hidden Costs of Overbed Tables: A Deep Dive</h2>
+                                    <p class="text-gray-300 mb-4">Uncover the surprising financial, physical, and psychological costs of relying on overbed tables for daily tasks.</p>
+                                    <div class="flex items-center text-gray-400 text-sm">
+                                        <time datetime="2025-02-24">February 24, 2025</time>
+                                        <span class="mx-2">•</span>
+                                        <span>6 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="bg-gray-700 rounded-xl p-8 opacity-50">
-                        <span class="text-sm text-blue-400 mb-2 block">Coming Soon</span>
-                        <h2 class="text-xl font-bold mb-4">Future Article</h2>
-                        <p class="text-gray-300">Stay tuned for more insights...</p>
+
+                    <!-- Page 2 - Future posts will go here -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-show="currentPage === 2">
+                        <div class="bg-gray-700 rounded-xl p-8 opacity-50">
+                            <span class="text-sm text-blue-400 mb-2 block">Coming Soon</span>
+                            <h2 class="text-xl font-bold mb-4">Future Article</h2>
+                            <p class="text-gray-300 mb-4">More insightful content about overbed tables and alternatives coming soon.</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-xl p-8 opacity-50">
+                            <span class="text-sm text-blue-400 mb-2 block">Coming Soon</span>
+                            <h2 class="text-xl font-bold mb-4">Future Article</h2>
+                            <p class="text-gray-300 mb-4">More insightful content about overbed tables and alternatives coming soon.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-700 rounded-xl p-8 opacity-50">
-                        <span class="text-sm text-blue-400 mb-2 block">Coming Soon</span>
-                        <h2 class="text-xl font-bold mb-4">Future Article</h2>
-                        <p class="text-gray-300">Stay tuned for more insights...</p>
+
+                    <!-- Pagination Controls -->
+                    <div class="flex justify-center mt-12 space-x-4">
+                        <button 
+                            class="px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            x-on:click="currentPage = currentPage - 1"
+                            x-bind:disabled="currentPage === 1">
+                            ← Previous
+                        </button>
+                        <div class="flex items-center space-x-2">
+                            <button 
+                                class="w-10 h-10 rounded-lg transition-colors duration-300"
+                                x-bind:class="currentPage === 1 ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'"
+                                x-on:click="currentPage = 1">
+                                1
+                            </button>
+                            <button 
+                                class="w-10 h-10 rounded-lg transition-colors duration-300"
+                                x-bind:class="currentPage === 2 ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'"
+                                x-on:click="currentPage = 2">
+                                2
+                            </button>
+                        </div>
+                        <button 
+                            class="px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            x-on:click="currentPage = currentPage + 1"
+                            x-bind:disabled="currentPage === totalPages">
+                            Next →
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="bg-gray-900 border-t border-gray-800 py-12 px-6">
@@ -80,9 +143,8 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
-                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
-                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
                     </ul>
                 </div>
                 <div>
@@ -99,7 +161,7 @@
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-400">&copy; 2024 overbed-tables.com. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 overbed-tables.com. All rights reserved.</p>
             </div>
         </div>
     </footer>
