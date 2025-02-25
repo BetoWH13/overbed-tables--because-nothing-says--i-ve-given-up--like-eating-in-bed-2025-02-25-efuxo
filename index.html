@@ -16,6 +16,33 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Overbed Tables: Break Free from Bed-Based Productivity",
+      "url": "https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/",
+      "description": "Discover why overbed tables are holding you back from true productivity and dignity",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/search.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Organization schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "overbed-tables.com",
+      "url": "https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/",
+      "logo": "https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo/logo.png"
+    }
+    </script>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
     <header class="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
@@ -32,6 +59,16 @@
                     <a href="#faq" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">FAQ</a>
                     <a href="blog.html" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">Blog</a>
                 </div>
+                <div class="hidden md:flex items-center ml-4">
+                    <form action="search.html" method="get" class="relative">
+                        <input type="text" name="q" placeholder="Search..." class="bg-gray-800 text-white text-sm rounded-lg px-3 py-1.5 w-36 focus:w-48 transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
                 <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
@@ -43,6 +80,16 @@
                 <a href="#about" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">About</a>
                 <a href="#faq" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">FAQ</a>
                 <a href="blog.html" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">Blog</a>
+                <form action="search.html" method="get" class="mt-3 px-3">
+                    <div class="relative">
+                        <input type="text" name="q" placeholder="Search..." class="w-full bg-gray-700 text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>
         </nav>
     </header>
@@ -296,6 +343,9 @@
             }
         });
     </script>
+    
+    <!-- Breadcrumbs Script -->
+    <script src="js/breadcrumbs.js"></script>
 </body>
 </body>
 </html>

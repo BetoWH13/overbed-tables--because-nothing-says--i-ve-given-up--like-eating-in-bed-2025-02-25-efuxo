@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - overbed-tables.com</title>
+    <meta name="description" content="Search results from overbed-tables.com">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased" x-data="{ 
+    searchQuery: new URLSearchParams(window.location.search).get('q') || '',
+    searchResults: [],
+    noResults: false,
+    isSearching: true,
+    
+    async search() {
+        this.isSearching = true;
+        this.noResults = false;
+        
+        if (!this.searchQuery) {
+            this.searchResults = [];
+            this.isSearching = false;
+            this.noResults = true;
+            return;
+        }
+        
+        // This is a simple client-side search implementation
+        // In a real implementation, you might want to use a server-side search
+        const searchablePages = [
+            { title: 'Overbed Tables: Break Free from Bed-Based Productivity', url: 'index.html', content: 'Overbed tables productivity dignity workspace solution ergonomic excellence professional image enhancement transform work life' },
+            { title: 'The Dark Side of Overbed Tables: Are They Actually Bad for Your Health?', url: 'blog/the-dark-side-of-overbed-tables-are-they-actually-bad-for-your-health.html', content: 'health risks circulation problems back pain tech neck muscle loss healthier alternatives' },
+            { title: 'The Ergonomic Myth: Are Overbed Tables Really Better for Posture?', url: 'blog/the-ergonomic-myth-are-overbed-tables-really-better-for-posture.html', content: 'ergonomic myth posture healthy alignment alternatives' },
+            { title: 'Are Overbed Tables a Waste of Money?', url: 'blog/are-overbed-tables-a-waste-of-money-heres-what-the-reviews-dont-tell-you.html', content: 'waste money reviews cost value alternatives' },
+            { title: 'The Hidden Costs of Overbed Tables: A Deep Dive Into Workspace Psychology', url: 'blog/the-hidden-costs-of-overbed-tables-a-deep-dive-int.html', content: 'hidden costs workspace psychology productivity posture professional image remote work' },
+            { title: 'Overbed Tables Are Overhyped', url: 'blog/overbed-tables-are-overhyped-heres-how-to-pick-one-that-wont-suck.html', content: 'overhyped quality selection guide recommendations' },
+            { title: 'Overbed Tables: The Lazy Person\'s Desk or a Useless Gimmick?', url: 'blog/overbed-tables-the-lazy-persons-desk-or-a-useless-gimmick.html', content: 'lazy gimmick productivity alternatives' },
+            { title: 'The Best Alternatives to Overbed Tables That Cost Less', url: 'blog/the-best-alternatives-to-overbed-tables-that-cost-less.html', content: 'alternatives cost budget options affordable solutions' },
+            { title: 'The Ugly Truth About Overbed Tables', url: 'blog/the-ugly-truth-about-overbed-tables.html', content: 'truth reality expectations disappointment' },
+            { title: 'Why You Might Not Need an Overbed Table After All', url: 'blog/why-you-might-not-need-an-overbed-table-after-all.html', content: 'necessity alternatives solutions' }
+        ];
+        
+        const query = this.searchQuery.toLowerCase();
+        this.searchResults = searchablePages.filter(page => {
+            return page.title.toLowerCase().includes(query) || 
+                   page.content.toLowerCase().includes(query);
+        });
+        
+        this.isSearching = false;
+        this.noResults = this.searchResults.length === 0;
+    }
+}" x-init="search()">
+    <header class="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://BetoWH13.github.io/overbed-tables--because-nothing-says--i-ve-given-up--like-eating-in-bed-2025-02-25-efuxo" class="text-xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
+                    overbed-tables.com
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#features" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">Features</a>
+                    <a href="index.html#benefits" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">Benefits</a>
+                    <a href="index.html#testimonials" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">Testimonials</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">About</a>
+                    <a href="index.html#faq" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">FAQ</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white hover:scale-105 transition-all duration-300">Blog</a>
+                </div>
+                <div class="hidden md:flex items-center ml-4">
+                    <form action="search.html" method="get" class="relative" @submit.prevent="search">
+                        <input type="text" name="q" x-model="searchQuery" placeholder="Search..." class="bg-gray-800 text-white text-sm rounded-lg px-3 py-1.5 w-36 focus:w-48 transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="mobile-menu hidden md:hidden mt-4 bg-gray-800 rounded-lg p-4">
+                <a href="index.html#features" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">Features</a>
+                <a href="index.html#benefits" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">Benefits</a>
+                <a href="index.html#testimonials" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">Testimonials</a>
+                <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">About</a>
+                <a href="index.html#faq" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">FAQ</a>
+                <a href="blog.html" class="block py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded px-3">Blog</a>
+                <form action="search.html" method="get" class="mt-3 px-3" @submit.prevent="search">
+                    <div class="relative">
+                        <input type="text" name="q" x-model="searchQuery" placeholder="Search..." class="w-full bg-gray-700 text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <!-- Breadcrumb -->
+                <nav class="flex mb-8" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="ml-1 text-sm font-medium text-gray-300 md:ml-2">Search Results</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                
+                <h1 class="text-3xl font-bold mb-6">Search Results for "<span x-text="searchQuery"></span>"</h1>
+                
+                <!-- Loading indicator -->
+                <div x-show="isSearching" class="flex justify-center items-center py-12">
+                    <svg class="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </div>
+                
+                <!-- No results message -->
+                <div x-show="noResults && !isSearching" class="py-8 text-center">
+                    <p class="text-xl text-gray-400 mb-4">No results found for "<span x-text="searchQuery"></span>"</p>
+                    <p class="text-gray-500">Try different keywords or check out our <a href="blog.html" class="text-blue-400 hover:underline">blog</a> for more content.</p>
+                </div>
+                
+                <!-- Search results -->
+                <div x-show="searchResults.length > 0 && !isSearching" class="space-y-6">
+                    <template x-for="result in searchResults" :key="result.url">
+                        <div class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-300">
+                            <h2 class="text-xl font-bold mb-2">
+                                <a :href="result.url" class="text-white hover:text-blue-400 transition-colors duration-300" x-text="result.title"></a>
+                            </h2>
+                            <p class="text-gray-400 text-sm mb-2" x-text="result.url"></p>
+                            <p class="text-gray-300" x-text="result.content.length > 150 ? result.content.substring(0, 150) + '...' : result.content"></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">overbed-tables.com</h3>
+                    <p class="text-gray-400">Empowering professionals to work better since 2024.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="index.html#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="affiliate-disclosure.html" class="text-gray-400 hover:text-white transition-colors duration-300">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <a href="https://amzn.to/417HE4A" class="text-gray-400 hover:text-white transition-colors duration-300">Get an Adjustable Standing Desk</a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">&copy; 2025 overbed-tables.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
