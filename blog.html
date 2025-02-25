@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased" x-data="{ currentPage: 1, totalPages: 2, postsPerPage: 4 }">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased" x-data="{ currentPage: 1, totalPages: 3, postsPerPage: 4 }">
     <header class="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -34,6 +34,28 @@
                         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">
+                                    <a href="blog/the-dark-side-of-overbed-tables-are-they-actually-bad-for-your-health.html" class="text-white hover:text-blue-400 transition-colors duration-300">The Dark Side of Overbed Tables: Are They Actually Bad for Your Health?</a>
+                                </h3>
+                                <div class="text-gray-400 text-sm mb-4">February 25, 2025 • 5 min read</div>
+                                <p class="text-gray-300 mb-4">Discover the hidden health risks of overbed tables, from circulation problems and back pain to tech neck and muscle loss. Learn healthier alternatives.</p>
+                                <a href="blog/the-dark-side-of-overbed-tables-are-they-actually-bad-for-your-health.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="blog/the-ergonomic-myth-are-overbed-tables-really-better-for-posture.html" class="text-white hover:text-blue-400 transition-colors duration-300">The Ergonomic Myth: Are Overbed Tables Really Better for Posture?</a>
+                                </h3>
+                                <div class="text-gray-400 text-sm mb-4">February 25, 2025 • 5 min read</div>
+                                <p class="text-gray-300 mb-4">Debunking the myth that overbed tables are ergonomic. Learn why they might be ruining your posture and what alternatives actually support healthy alignment.</p>
+                                <a href="blog/the-ergonomic-myth-are-overbed-tables-really-better-for-posture.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
                                     <a href="blog/are-overbed-tables-a-waste-of-money-heres-what-the-reviews-dont-tell-you.html" class="text-white hover:text-blue-400 transition-colors duration-300">Are Overbed Tables a Waste of Money? Here's What the Reviews Don't Tell You</a>
                                 </h3>
                                 <div class="text-gray-400 text-sm mb-4">February 25, 2025 • 5 min read</div>
@@ -41,6 +63,7 @@
                                 <a href="blog/are-overbed-tables-a-waste-of-money-heres-what-the-reviews-dont-tell-you.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
                             </div>
                         </div>
+                        
                         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">
@@ -51,6 +74,10 @@
                                 <a href="blog/overbed-tables-the-lazy-persons-desk-or-a-useless-gimmick.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Page 2 - Second set of posts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-show="currentPage === 2">
                         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">
@@ -71,10 +98,6 @@
                                 <a href="blog/the-hidden-costs-of-overbed-tables-a-deep-dive-into-price-vs-value.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Page 2 - Second set of posts -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-show="currentPage === 2">
                         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">
@@ -97,34 +120,55 @@
                         </div>
                     </div>
 
+                    <!-- Page 3 - Third set of posts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-show="currentPage === 3">
+                        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="blog/overbed-tables-the-lazy-persons-desk-or-a-useless-gimmick.html" class="text-white hover:text-blue-400 transition-colors duration-300">Overbed Tables: The Lazy Person's Desk or a Useless Gimmick?</a>
+                                </h3>
+                                <div class="text-gray-400 text-sm mb-4">February 25, 2025 • 5 min read</div>
+                                <p class="text-gray-300 mb-4">Overbed tables promise convenience, but are they worth your money? Let's explore the pros, cons, and alternatives to these popular but questionable products.</p>
+                                <a href="blog/overbed-tables-the-lazy-persons-desk-or-a-useless-gimmick.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="blog/overbed-tables-are-overhyped-heres-how-to-pick-one-that-wont-suck.html" class="text-white hover:text-blue-400 transition-colors duration-300">Overbed Tables Are Overhyped—Here's How to Pick One That Won't Suck</a>
+                                </h3>
+                                <div class="text-gray-400 text-sm mb-4">February 25, 2025 • 5 min read</div>
+                                <p class="text-gray-300 mb-4">Looking for an overbed table that won't disappoint? This guide cuts through the marketing hype to help you find one that's actually worth your money.</p>
+                                <a href="blog/overbed-tables-are-overhyped-heres-how-to-pick-one-that-wont-suck.html" class="inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Pagination Controls -->
-                    <div class="flex justify-center mt-12 space-x-4">
-                        <button 
-                            class="px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                            x-on:click="currentPage = currentPage - 1"
-                            x-bind:disabled="currentPage === 1">
-                            ← Previous
-                        </button>
-                        <div class="flex items-center space-x-2">
-                            <button 
-                                class="w-10 h-10 rounded-lg transition-colors duration-300"
-                                x-bind:class="currentPage === 1 ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'"
-                                x-on:click="currentPage = 1">
+                    <div class="flex justify-center mt-12">
+                        <nav class="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <button @click="currentPage = Math.max(1, currentPage - 1)" class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-700 bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700">
+                                <span class="sr-only">Previous</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <button @click="currentPage = 1" :class="{ 'bg-blue-600 text-white': currentPage === 1, 'bg-gray-800 text-gray-300 hover:bg-gray-700': currentPage !== 1 }" class="relative inline-flex items-center px-4 py-2 border border-gray-700 text-sm font-medium">
                                 1
                             </button>
-                            <button 
-                                class="w-10 h-10 rounded-lg transition-colors duration-300"
-                                x-bind:class="currentPage === 2 ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'"
-                                x-on:click="currentPage = 2">
+                            <button @click="currentPage = 2" :class="{ 'bg-blue-600 text-white': currentPage === 2, 'bg-gray-800 text-gray-300 hover:bg-gray-700': currentPage !== 2 }" class="relative inline-flex items-center px-4 py-2 border border-gray-700 text-sm font-medium">
                                 2
                             </button>
-                        </div>
-                        <button 
-                            class="px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                            x-on:click="currentPage = currentPage + 1"
-                            x-bind:disabled="currentPage === totalPages">
-                            Next →
-                        </button>
+                            <button @click="currentPage = 3" :class="{ 'bg-blue-600 text-white': currentPage === 3, 'bg-gray-800 text-gray-300 hover:bg-gray-700': currentPage !== 3 }" class="relative inline-flex items-center px-4 py-2 border border-gray-700 text-sm font-medium">
+                                3
+                            </button>
+                            <button @click="currentPage = Math.min(3, currentPage + 1)" class="relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-700 bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700">
+                                <span class="sr-only">Next</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </nav>
                     </div>
                 </div>
             </div>
